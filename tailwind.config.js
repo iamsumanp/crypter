@@ -22,8 +22,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        "bg-dark": "#18191A",
         dark: "#1C1E21",
+        bg_dark: "#18191A",
       },
     },
   },

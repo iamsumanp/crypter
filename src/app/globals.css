@@ -19,4 +19,5 @@ body {
   color: var(--white);
   font-family: "Open Sans", sans-serif;
   /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+  overflow-x: hidden;
 }
