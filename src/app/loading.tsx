@@ -1,6 +1,15 @@
-// import Skeleton from "react-loading-skeleton";
-// import "react-loading-skeleton/dist/skeleton.css";
+"use client";
+import "react-loading-skeleton/dist/skeleton.css";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 export default function Loading() {
-  // You can add any UI inside Loading, including a Skeleton.
-  return <div>loading...</div>;
+  return (
+    <Skeleton
+      width={100}
+      height={200}
+      baseColor="#18191A"
+      highlightColor="#404040"
+      count={3}
+    />
+  ); // Five-line loading skeleton
+  // return <div>loading...</div>; // Five-line loading skeleton
 }
