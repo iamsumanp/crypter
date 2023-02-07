@@ -8,7 +8,7 @@ const SideBar = () => {
           <Link href="/">Home</Link>
         </li>
         <li className="hover:bg-bg_dark pl-2 py-2">
-          <Link href="/"> News</Link>
+          <Link href="/news"> News</Link>
         </li>
         <li className="hover:bg-bg_dark pl-2 py-2">
           <Link href="/"> Exchange</Link>
