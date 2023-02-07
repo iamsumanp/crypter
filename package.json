@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/material": "latest",
+    "@mui/x-data-grid": "latest",
     "@next/font": "13.1.6",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
@@ -17,9 +21,12 @@
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",
     "react": "18.2.0",
+    "react-data-table-component": "^7.5.3",
     "react-dom": "18.2.0",
     "react-loading-screen": "^0.0.17",
     "react-loading-skeleton": "^3.1.0",
+    "rsuite-table": "^5.8.2",
+    "styled-components": "^5.3.6",
     "typescript": "4.9.5"
   },
   "devDependencies": {
