@@ -45,9 +45,8 @@ const getOverallResults = async () => {
   const res = await await fetch(
     "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0",
     options
-  )
-    .then((resp) => resp.json())
-    .then((data) => data);
+  ).then((resp) => resp.json());
+  // .then((data) => data);
   return res.data.stats;
 };
 export default async function Home() {
@@ -56,39 +55,44 @@ export default async function Home() {
   return (
     <div className="flex flex-col space-y-6  w-full">
       <Suspense fallback={<Loading />}>
-        <div className="flex flex-col md:flex-row items-center  space-y-6 md:space-y-0  justify-between w-full md:items-start">
+        <div className="flex flex-col md:flex-row items-center  space-y-6 md:space-y-0 space-x-40 w-full md:items-start">
           <div className="flex flex-col space-y-4">
             <div className="flex flex-col space-y-2">
-              <span>Total cryptocurrencies</span>
               <span className="text-gray-400 text-xs md:text-sm">
-                {overallData?.total}
+                Total cryptocurrencies
               </span>
+              <span>{overallData?.total}</span>
             </div>
             <div className="flex flex-col space-y-2">
-              <span>Total coins</span>
               <span className="text-gray-400 text-xs md:text-sm">
-                {overallData?.totalCoins}
+                Total coins
               </span>
+              <span>{overallData?.totalCoins}</span>
             </div>
             <div className="flex flex-col space-y-2">
-              <span>Total Markets</span>
               <span className="text-gray-400 text-xs md:text-sm">
-                {overallData?.totalMarkets}
+                Total Markets
               </span>
+              <span>{overallData?.totalMarkets}</span>
             </div>
           </div>
           <div className="flex flex-col space-y-4  ">
             <div className="flex flex-col space-y-2">
-              <span>Total Exchanges</span>
               <span className="text-gray-400 text-xs md:text-sm">
-                {overallData?.totalExchanges}
+                Total Exchanges
               </span>
+              <span>{overallData?.totalExchanges}</span>
             </div>
             <div className="flex flex-col space-y-2">
-              <span>Total MarketCap</span>
               <span className="text-gray-400 text-xs md:text-sm">
-                {overallData?.totalMarketCap}
+                Total MarketCap
               </span>
+              {/* <span>
+                {(
+                  Math.abs(Number(overallData?.totalMarketCap)) / 1.0e9
+                ).toFixed(2) + "B"}
+              </span> */}
+              <span>{overallData?.totalMarketCap}</span>
             </div>
           </div>
         </div>
