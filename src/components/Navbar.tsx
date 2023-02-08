@@ -13,7 +13,9 @@ const Navbar = () => {
         </Link>
         <div className="hidden md:flex ">
           <div>Dark mode</div>
-          <div className="ml-8">About</div>
+          <div className="ml-8 pr-6">
+            <Link href={"/about"}>About</Link>
+          </div>
         </div>
       </div>
     </nav>

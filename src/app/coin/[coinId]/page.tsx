@@ -1,5 +1,6 @@
 import Chart from "@/components/Chart";
 import HTMLReactParser from "html-react-parser";
+import Link from "next/link";
 import React from "react";
 import { Line } from "react-chartjs-2";
 interface coinDetaisIdParams {
@@ -41,6 +42,8 @@ const CoinDetails = async ({ params }: coinDetaisIdParams) => {
     numberOfMarkets,
     numberOfExchanges,
     fullyDilutedMarketCap,
+    links,
+    url,
   } = singleCoinDetail;
   //   console.log(coinDetail);
   return (
@@ -106,9 +109,30 @@ const CoinDetails = async ({ params }: coinDetaisIdParams) => {
           </div>
         </div>
       </div>
-      <div className="pt-4 flex flex-col">
-        <span className="text-cyan text-xl">What is {name} ?</span>
-        <span className="pt-4">{HTMLReactParser(description)}</span>
+      <div className="flex flex-col md:flex-row space-x-0 space-y-6 md:space-y-0 md:space-x-6 justify-between">
+        <div className="pt-4 flex flex-col">
+          <span className="text-cyan text-xl">What is {name} ?</span>
+          <span className="pt-4">{HTMLReactParser(description)}</span>
+        </div>
+        <div className="bg-dark rounded-md flex flex-col w-full p-4">
+          <span>
+            <span className="text-cyan text-lg">{name}</span> Links:
+          </span>
+          {links.map((data: any, id: number) => (
+            <div
+              className="flex flex-row justify-between space-x-8 pb-3 pt-4"
+              key={id}
+            >
+              <span className="text-sm">{data.type}</span>
+
+              <span className=" text-slate-400 text-end hover:text-cyan cursor-pointer">
+                <Link href={data.url} target="_blank">
+                  {data.name}
+                </Link>
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
