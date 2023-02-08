@@ -24,6 +24,7 @@ module.exports = {
       colors: {
         dark: "#1C1E21",
         bg_dark: "#18191A",
+        cyan: "rgba(75,192,192,1)",
       },
     },
   },

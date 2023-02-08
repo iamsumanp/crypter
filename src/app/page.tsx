@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Suspense } from "react";
 import Loading from "./loading";
 
@@ -103,43 +104,47 @@ export default async function Home() {
           {coinsData
             .filter((data: cryptoDataType) => data.rank < 10)
             .map((data: cryptoDataType, id: number) => (
-              <div key={id} className="bg-dark p-4 rounded-md  flex flex-col">
-                <div className="flex flex-col md:flex-row justify-between pb-10">
-                  <span>
-                    {id + 1}.{data.name}
-                  </span>
-                  <Image
-                    src={data.iconUrl}
-                    alt="cryptIcon"
-                    height={20}
-                    width={20}
-                  ></Image>
-                  {/* <span>hello</span> */}
-                </div>
-                <div className="flex justify-between items-center pb-3">
-                  <span>marketCap:</span>
-                  <span className="text-gray-400 text-xs md:text-sm">
-                    {data.marketCap}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center pb-3">
-                  <span>price:</span>
-                  <span className="text-gray-400 text-xs md:text-sm">
-                    {parseFloat(data.price).toFixed(2)}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center pb-3">
-                  <span>listed at:</span>
-                  <span className="text-gray-400 text-xs md:text-sm">
-                    {data.listedAt}
-                  </span>
-                </div>
-                <div className="flex justify-between items-center pb-3">
-                  <span>change:</span>
-                  <span className="text-gray-400 text-xs md:text-sm">
-                    {data.change}
-                  </span>
-                </div>
+              <div key={id}>
+                <Link href={`/coin/${data.uuid}`}>
+                  <div className="bg-dark p-4 rounded-md  flex flex-col">
+                    <div className="flex flex-col md:flex-row justify-between pb-10">
+                      <span>
+                        {id + 1}.{data.name}
+                      </span>
+                      <Image
+                        src={data.iconUrl}
+                        alt="cryptIcon"
+                        height={20}
+                        width={20}
+                      ></Image>
+                      {/* <span>hello</span> */}
+                    </div>
+                    <div className="flex justify-between items-center pb-3">
+                      <span>marketCap:</span>
+                      <span className="text-gray-400 text-xs md:text-sm">
+                        {data.marketCap}
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-center pb-3">
+                      <span>price:</span>
+                      <span className="text-gray-400 text-xs md:text-sm">
+                        {parseFloat(data.price).toFixed(2)}
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-center pb-3">
+                      <span>listed at:</span>
+                      <span className="text-gray-400 text-xs md:text-sm">
+                        {data.listedAt}
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-center pb-3">
+                      <span>change:</span>
+                      <span className="text-gray-400 text-xs md:text-sm">
+                        {data.change}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
               </div>
             ))}
         </div>

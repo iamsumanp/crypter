@@ -13,9 +13,6 @@ const SideBar = () => {
         <Link href="/exchange">
           <li className="hover:bg-bg_dark pl-2 py-4">Exchange</li>
         </Link>
-        <Link href="/">
-          <li className="hover:bg-bg_dark pl-2 py-4">Market</li>
-        </Link>
       </ul>
     </div>
   );

@@ -27,7 +27,7 @@ const getFinanceData = async () => {
   return res;
 };
 
-const page = async () => {
+const News = async () => {
   const financialData = await getFinanceData();
   return (
     <div className="flex flex-col w-full space-y-8">
@@ -72,4 +72,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default News;
