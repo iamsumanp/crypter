@@ -20,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ![e](https://user-images.githubusercontent.com/50448260/217771012-c243e911-98bf-463d-a53f-b14fb95bf245.PNG)
 
-/coin/[coindId] : 
+/coin/[coinId] : 
 
 ![g](https://user-images.githubusercontent.com/50448260/217771279-447f63f2-345d-4e00-8a65-9d609f9027eb.PNG)
 
