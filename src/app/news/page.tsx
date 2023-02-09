@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { Suspense } from "react";
-import Loading from "../loading";
+import Loading from "../../components/loading";
 
 interface financeData {
   title: string;

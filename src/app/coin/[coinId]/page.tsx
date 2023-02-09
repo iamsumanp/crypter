@@ -8,9 +8,9 @@ interface coinDetaisIdParams {
 }
 
 const CoinDetails = async ({ params }: coinDetaisIdParams) => {
-  const { coinId = "Qwsogvtv82FCd" } = params;
-  // const coinId = "Qwsogvtv82FCd";
-  console.log(coinId);
+  // const { coinId = "Qwsogvtv82FCd" } = params;
+  const coinId = "Qwsogvtv82FCd";
+  // console.log(coinId);
   const options = {
     method: "GET",
     headers: {

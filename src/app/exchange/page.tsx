@@ -2,7 +2,7 @@
 import { coinExchangeData } from "@/data/coinExchangeData";
 import React, { Suspense } from "react";
 import DataTable, { createTheme } from "react-data-table-component";
-import Loading from "../loading";
+import Loading from "../../components/loading";
 
 // ? const coinsExchangeData = async () => {
 //   const options = {
